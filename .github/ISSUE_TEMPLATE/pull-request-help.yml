@@ -1,0 +1,79 @@
+name: 🆘 Ayuda con Pull Requests / Pull Request Help
+description: Obtén ayuda con problemas de pull requests / Get help with pull request issues
+title: "[HELP] "
+labels: ["help wanted", "question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✅ Antes de reportar - Before reporting
+        
+        **Español**: Revisa la [Guía de Pull Requests](../GUIA_PULL_REQUESTS.md) primero.
+        **English**: Check the [Contributing Guide](../CONTRIBUTING.md) first.
+        
+  - type: dropdown
+    id: language
+    attributes:
+      label: Idioma / Language
+      description: ¿En qué idioma prefieres recibir ayuda? / In which language do you prefer to receive help?
+      options:
+        - Español
+        - English
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: problem-type
+    attributes:
+      label: Tipo de problema / Problem type
+      description: ¿Qué tipo de problema tienes? / What kind of problem are you having?
+      options:
+        - No puedo crear un pull request / Cannot create pull request
+        - Mi push fue rechazado / My push was rejected
+        - Problemas de permisos / Permission issues
+        - No veo mi branch en GitHub / Cannot see my branch on GitHub
+        - Otro / Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: ¿Qué pasó? / What happened?
+      description: Describe el problema que estás experimentando / Describe the problem you're experiencing
+      placeholder: Describe tu problema aquí... / Describe your problem here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-taken
+    attributes:
+      label: Pasos que intentaste / Steps you tried
+      description: ¿Qué comandos ejecutaste? / What commands did you run?
+      placeholder: |
+        Ejemplo / Example:
+        1. git add .
+        2. git commit -m "my changes" 
+        3. git push origin my-branch
+      render: bash
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-message
+    attributes:
+      label: Mensaje de error / Error message
+      description: Copia y pega cualquier mensaje de error / Copy and paste any error messages
+      placeholder: Pega el mensaje de error aquí... / Paste error message here...
+      render: bash
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Verificación / Checklist
+      description: Marca las casillas que apliquen / Check the boxes that apply
+      options:
+        - label: Leí la guía de pull requests / I read the pull request guide
+        - label: Verifiqué que estoy en el branch correcto / I verified I'm on the correct branch
+        - label: Mi repositorio está actualizado / My repository is up to date
+        - label: Intenté hacer git status / I tried git status

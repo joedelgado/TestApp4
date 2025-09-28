@@ -1,0 +1,50 @@
+name: Pull Request Validation
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Validate pull request
+      run: |
+        echo "✅ Pull request validation started"
+        echo "Repository: ${{ github.repository }}"
+        echo "Branch: ${{ github.ref }}"
+        echo "Event: ${{ github.event_name }}"
+        
+    - name: Check required files
+      run: |
+        echo "Checking for required files..."
+        if [ -f "LICENSE" ]; then
+          echo "✅ LICENSE file found"
+        else
+          echo "❌ LICENSE file missing"
+          exit 1
+        fi
+        
+        if [ -f "CONTRIBUTING.md" ]; then
+          echo "✅ CONTRIBUTING.md file found"
+        else
+          echo "⚠️ CONTRIBUTING.md file not found (recommended)"
+        fi
+        
+        if [ -f "GUIA_PULL_REQUESTS.md" ]; then
+          echo "✅ GUIA_PULL_REQUESTS.md file found"
+        else
+          echo "⚠️ GUIA_PULL_REQUESTS.md file not found (recommended)"
+        fi
+        
+    - name: Success message
+      run: |
+        echo "🎉 Pull request validation completed successfully!"
+        echo "Your push and pull request are working correctly."
+        echo "Tu push y pull request están funcionando correctamente."
