@@ -74,7 +74,7 @@ class FeatureCell: UITableViewCell {
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let tableView = UITableView(frame: .zero, style: .plain)
     let features: [Feature] = [
-        Feature(title: "UI Components", description: "Explora los componentes de UIKit", icon: "rectangle.stack", destination: UIViewController.self),
+        Feature(title: "UI Components", description: "Explora los componentes de UIKit", icon: "rectangle.stack", destination: UIComponentsViewController.self),
         Feature(title: "Album", description: "Visualiza y selecciona imágenes", icon: "photo.on.rectangle", destination: UIViewController.self),
         Feature(title: "Persistencia", description: "Guarda datos en Keychain y UserDefaults", icon: "lock.shield", destination: UIViewController.self),
         Feature(title: "Networking", description: "Consume APIs y muestra animaciones", icon: "network", destination: UIViewController.self),
