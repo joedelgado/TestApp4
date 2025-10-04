@@ -6,28 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		CF157D0F2E8CD0CE002D8FC3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF157D0E2E8CD0CE002D8FC3 /* README.md */; };
-		CF157D172E8CD4A5002D8FC3 /* UIInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D132E8CD4A5002D8FC3 /* UIInteractor.swift */; };
-		CF157D182E8CD4A5002D8FC3 /* UIBien.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D102E8CD4A5002D8FC3 /* UIBien.swift */; };
-		CF157D192E8CD4A5002D8FC3 /* UIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D152E8CD4A5002D8FC3 /* UIRouter.swift */; };
-		CF157D1A2E8CD4A5002D8FC3 /* UIPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D142E8CD4A5002D8FC3 /* UIPresenter.swift */; };
-		CF157D1B2E8CD4A5002D8FC3 /* UIComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D112E8CD4A5002D8FC3 /* UIComponentsViewController.swift */; };
-		CF157D1C2E8CD4A5002D8FC3 /* UIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D122E8CD4A5002D8FC3 /* UIEntity.swift */; };
-		CF157D1D2E8CD4A5002D8FC3 /* UIInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D132E8CD4A5002D8FC3 /* UIInteractor.swift */; };
-		CF157D1E2E8CD4A5002D8FC3 /* UIBien.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D102E8CD4A5002D8FC3 /* UIBien.swift */; };
-		CF157D1F2E8CD4A5002D8FC3 /* UIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D152E8CD4A5002D8FC3 /* UIRouter.swift */; };
-		CF157D202E8CD4A5002D8FC3 /* UIPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D142E8CD4A5002D8FC3 /* UIPresenter.swift */; };
-		CF157D212E8CD4A5002D8FC3 /* UIComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D112E8CD4A5002D8FC3 /* UIComponentsViewController.swift */; };
-		CF157D222E8CD4A5002D8FC3 /* UIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D122E8CD4A5002D8FC3 /* UIEntity.swift */; };
-		CF157D232E8CD4A5002D8FC3 /* UIInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D132E8CD4A5002D8FC3 /* UIInteractor.swift */; };
-		CF157D242E8CD4A5002D8FC3 /* UIBien.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D102E8CD4A5002D8FC3 /* UIBien.swift */; };
-		CF157D252E8CD4A5002D8FC3 /* UIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D152E8CD4A5002D8FC3 /* UIRouter.swift */; };
-		CF157D262E8CD4A5002D8FC3 /* UIPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D142E8CD4A5002D8FC3 /* UIPresenter.swift */; };
-		CF157D272E8CD4A5002D8FC3 /* UIComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D112E8CD4A5002D8FC3 /* UIComponentsViewController.swift */; };
-		CF157D282E8CD4A5002D8FC3 /* UIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF157D122E8CD4A5002D8FC3 /* UIEntity.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		CF6490362E89712D00942392 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -46,13 +24,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CF157D0E2E8CD0CE002D8FC3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CF157D102E8CD4A5002D8FC3 /* UIBien.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBien.swift; sourceTree = "<group>"; };
-		CF157D112E8CD4A5002D8FC3 /* UIComponentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentsViewController.swift; sourceTree = "<group>"; };
-		CF157D122E8CD4A5002D8FC3 /* UIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEntity.swift; sourceTree = "<group>"; };
-		CF157D132E8CD4A5002D8FC3 /* UIInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInteractor.swift; sourceTree = "<group>"; };
-		CF157D142E8CD4A5002D8FC3 /* UIPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPresenter.swift; sourceTree = "<group>"; };
-		CF157D152E8CD4A5002D8FC3 /* UIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRouter.swift; sourceTree = "<group>"; };
 		CF64901F2E89712B00942392 /* TestApp4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6490352E89712D00942392 /* TestApp4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestApp4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF64903F2E89712D00942392 /* TestApp4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestApp4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,24 +85,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CF157D162E8CD4A5002D8FC3 /* UIComponents */ = {
-			isa = PBXGroup;
-			children = (
-				CF157D102E8CD4A5002D8FC3 /* UIBien.swift */,
-				CF157D112E8CD4A5002D8FC3 /* UIComponentsViewController.swift */,
-				CF157D122E8CD4A5002D8FC3 /* UIEntity.swift */,
-				CF157D132E8CD4A5002D8FC3 /* UIInteractor.swift */,
-				CF157D142E8CD4A5002D8FC3 /* UIPresenter.swift */,
-				CF157D152E8CD4A5002D8FC3 /* UIRouter.swift */,
-			);
-			path = UIComponents;
-			sourceTree = "<group>";
-		};
 		CF6490162E89712B00942392 = {
 			isa = PBXGroup;
 			children = (
-				CF157D162E8CD4A5002D8FC3 /* UIComponents */,
-				CF157D0E2E8CD0CE002D8FC3 /* README.md */,
 				CF6490212E89712B00942392 /* TestApp4 */,
 				CF6490382E89712D00942392 /* TestApp4Tests */,
 				CF6490422E89712D00942392 /* TestApp4UITests */,
@@ -228,7 +184,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					CF64901E2E89712B00942392 = {
 						CreatedOnToolsVersion = 16.4;
@@ -269,7 +225,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF157D0F2E8CD0CE002D8FC3 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF157D232E8CD4A5002D8FC3 /* UIInteractor.swift in Sources */,
-				CF157D242E8CD4A5002D8FC3 /* UIBien.swift in Sources */,
-				CF157D252E8CD4A5002D8FC3 /* UIRouter.swift in Sources */,
-				CF157D262E8CD4A5002D8FC3 /* UIPresenter.swift in Sources */,
-				CF157D272E8CD4A5002D8FC3 /* UIComponentsViewController.swift in Sources */,
-				CF157D282E8CD4A5002D8FC3 /* UIEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,12 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF157D172E8CD4A5002D8FC3 /* UIInteractor.swift in Sources */,
-				CF157D182E8CD4A5002D8FC3 /* UIBien.swift in Sources */,
-				CF157D192E8CD4A5002D8FC3 /* UIRouter.swift in Sources */,
-				CF157D1A2E8CD4A5002D8FC3 /* UIPresenter.swift in Sources */,
-				CF157D1B2E8CD4A5002D8FC3 /* UIComponentsViewController.swift in Sources */,
-				CF157D1C2E8CD4A5002D8FC3 /* UIEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,12 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF157D1D2E8CD4A5002D8FC3 /* UIInteractor.swift in Sources */,
-				CF157D1E2E8CD4A5002D8FC3 /* UIBien.swift in Sources */,
-				CF157D1F2E8CD4A5002D8FC3 /* UIRouter.swift in Sources */,
-				CF157D202E8CD4A5002D8FC3 /* UIPresenter.swift in Sources */,
-				CF157D212E8CD4A5002D8FC3 /* UIComponentsViewController.swift in Sources */,
-				CF157D222E8CD4A5002D8FC3 /* UIEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +394,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -513,6 +451,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
