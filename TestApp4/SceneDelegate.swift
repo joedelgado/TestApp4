@@ -11,23 +11,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
-        // Crear los dos tabs
-        let mainVC = MainViewController()
-        mainVC.tabBarItem = UITabBarItem(title: "Features", image: UIImage(systemName: "list.bullet"), tag: 0)
-        let profileVC = ProfileViewController()
-        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
-        // Embeder en navigation controllers
-        let mainNav = UINavigationController(rootViewController: mainVC)
-        let profileNav = UINavigationController(rootViewController: profileVC)
-        // Crear el tab bar controller
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [mainNav, profileNav]
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
+        // Use Storyboard as specified in README / Usar Storyboard como especifica el README
+        // The Main.storyboard will automatically load with initialViewController
+        // El Main.storyboard se cargará automáticamente con el initialViewController
+        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
