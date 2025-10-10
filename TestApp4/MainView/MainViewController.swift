@@ -75,7 +75,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     let tableView = UITableView(frame: .zero, style: .plain)
     let features: [Feature] = [
         Feature(title: "UI Components", description: "Explora los componentes de UIKit", icon: "rectangle.stack", destination: UIComponentsViewController.self),
-        Feature(title: "Album", description: "Visualiza y selecciona imágenes", icon: "photo.on.rectangle", destination: UIViewController.self),
+        Feature(title: "Album", description: "Visualiza y selecciona imágenes", icon: "photo.on.rectangle", destination: AlbumMainViewController.self),
         Feature(title: "Persistencia", description: "Guarda datos en Keychain y UserDefaults", icon: "lock.shield", destination: UIViewController.self),
         Feature(title: "Networking", description: "Consume APIs y muestra animaciones", icon: "network", destination: UIViewController.self),
         Feature(title: "Mapas", description: "Explora ubicaciones en MapKit", icon: "map", destination: UIViewController.self),
@@ -102,15 +102,26 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return features.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FeatureCell.identifier, for: indexPath) as? FeatureCell else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: FeatureCell.identifier, for: indexPath) as! FeatureCell
         cell.configure(with: features[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let feature = features[indexPath.row]
-        let vc = feature.destination.init()
-        vc.title = feature.title
-        navigationController?.pushViewController(vc, animated: true)
+        
+        var viewController: UIViewController
+        
+        // Handle special cases with VIPER modules / Manejar casos especiales con módulos VIPER
+        if feature.destination == AlbumMainViewController.self {
+            // Use Album Router to create module / Usar Router de Album para crear módulo
+            viewController = AlbumRouter.createAlbumModule()
+        } else {
+            // Default instantiation / Instanciación por defecto
+            viewController = feature.destination.init()
+        }
+        
+        // Navigate to feature / Navegar al feature
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
