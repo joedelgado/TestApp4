@@ -1,105 +1,145 @@
-# Contexto y Reglas del Proyecto iOS para GitHub Copilot
+# TestApp4 - Tutorial UIKit
 
-**Rol:** Eres un asistente de codificación experto en **Swift**, **UIKit**, y el desarrollo de aplicaciones para **iOS**.
+## 📱 Descripción
+Aplicación tutorial de UIKit que implementa diferentes funcionalidades utilizando la arquitectura VIPER.
 
-**Objetivo:** Ayudarme a construir la aplicación **TestApp**, siguiendo la arquitectura **VIPER**, los principios **SOLID** y los estándares de código limpio detallados.
+## 🏗️ Arquitectura
+- **Patrón Principal:** VIPER (View, Interactor, Presenter, Entity, Router)
+- **UI Framework:** UIKit programático (migrado exitosamente desde Storyboard)
+- **Navegación:** UINavigationController programático
+- **Flujo Git:** Git Flow (feature branches → develop → main)
 
----
+## ✅ Funcionalidades Implementadas
 
-## Directrices de Desarrollo y Estándares de Código
+### 1. **UI Components** 
+- 🎯 **Estado:** ✅ Completado
+- 📁 **Módulo:** `UIComponents/`
+- 📋 **Descripción:** Explora los componentes de UIKit
+- 🔧 **Arquitectura:** VIPER completa
+- 📄 **Archivos:**
+  - `UIComponentsViewController.swift`
+  - `UIPresenter.swift`
+  - `UIInteractor.swift`
+  - `UIEntity.swift`
+  - `UIRouter.swift`
+  - `UIBien.swift`
 
-Debes adherirte rigurosamente a las siguientes directrices en todo el código generado:
+### 2. **Album**
+- 🎯 **Estado:** ✅ Completado
+- 📁 **Módulo:** `Album/`
+- 📋 **Descripción:** Visualiza y selecciona imágenes
+- 🔧 **Arquitectura:** VIPER completa
+- 📄 **Archivos:**
+  - `AlbumMainViewController.swift`
+  - `AlbumPresenter.swift`
+  - `AlbumInteractor.swift`
+  - `AlbumEntity.swift`
+  - `AlbumRouter.swift`
 
-1.  **Arquitectura:** Utiliza la arquitectura **VIPER** (View, Interactor, Presenter, Entity, Router) para la estructura de cada *feature*.
-2.  **Tecnología:**
-    * El proyecto es **UIKit** con un target mínimo de **iOS 12**.
-    * **Elimina** todo rastro de funciones que estén disponibles únicamente para **SwiftUI**.
-    * Utiliza el **Storyboard** de Xcode para el entorno de desarrollo.
-3.  **Principios de Diseño y Código Limpio:** Aplica los principios **SOLID** y las siguientes normas:
-    * **Nombres Significativos**.
-    * **Funciones Pequeñas y Específicas**.
-    * **Comentarios Útiles** (no redundantes).
-    * **DRY** (Don't Repeat Yourself).
-    * **KISS** (Keep It Simple, Stupid).
-    * Aplica la **Ley de Deméter** (Principio de Conocimiento Mínimo) y **Composición sobre Herencia**.
-4.  **Comentarios:** Comenta los bloques de código importantes en **inglés y español**.
-5.  **GitFlow:** El flujo de trabajo sigue un **GitFlow** organizado.
-    * Cada *feature* se implementará en una **rama aparte**.
-    * Al terminar, la *feature* se integra a la rama **`Develop`** y de ahí a la rama **`Main`**.
-    * Se deben usar **etiquetas de Git (tags)** para denotar las versiones en la rama **`main`** (ej: `v0.1`).
+### 3. **Persistencia** ✅ RECIÉN COMPLETADO
+- 🎯 **Estado:** ✅ Completado al 100%
+- 📁 **Módulo:** `Persistence/`
+- 📋 **Descripción:** Guarda datos en Keychain y UserDefaults
+- 🔧 **Arquitectura:** VIPER completa con UI programática
+- ⚡ **Funcionalidades:**
+  - 🔐 Keychain Storage para credenciales seguras
+  - ⚙️ UserDefaults Storage para configuraciones
+  - 📊 Display de resultados con mensajes de éxito/error
+  - 🎯 Interface completamente programática
+- 📄 **Archivos:**
+  - `PersistenceViewController.swift` (UI programática completa)
+  - `PersistencePresenter.swift`
+  - `PersistenceInteractor.swift`
+  - `PersistenceEntity.swift`
+  - `PersistenceRouter.swift`
 
----
+### 4. **MainView**
+- 🎯 **Estado:** ✅ Completado
+- 📁 **Módulo:** `MainView/`
+- 📋 **Descripción:** Vista principal con lista de features
+- 🔧 **Características:**
+  - TableView con celdas personalizadas
+  - Navegación a diferentes módulos
+  - Manejo especial para módulos VIPER
+- 📄 **Archivos principales:**
+  - `MainViewController.swift` (Vista principal de features)
+  - `ProfileViewController.swift`
+  - `EditProfileViewController.swift`
+  - Módulos VIPER auxiliares
 
-## Features a Desarrollar
+## ⏳ Funcionalidades Pendientes
 
-### Feature 1: Vista Principal (Tap Bar)
+### 5. **Networking** 🎯 PRÓXIMO MÓDULO
+- 🎯 **Estado:** ⏳ Pendiente - SIGUIENTE EN DESARROLLO
+- 📋 **Descripción:** Consume APIs y muestra animaciones
+- 🔧 **Estado Actual:** Placeholder (apunta a UIViewController genérico)
+- 📝 **Por Implementar:**
+  - Módulo VIPER completo
+  - Consumo de APIs REST
+  - Animaciones de carga
+  - Manejo de errores de red
+  - UI programática
 
-* Implementar un **Tap Bar Controller** con dos secciones: **Features** y **Perfil**.
-* **Sección Features:** Título largo y una **tabla**.
-    * La tabla contendrá celdas de diferentes tamaños, dirigiendo a las vistas de los features subsecuentes a través de un **navigation controller**.
-    * Las celdas serán una **card** con bordes redondeados, sombra, un *image view*, un *label* para el título y otro para la descripción.
-* **Sección Perfil:** Mostrar *image view* por defecto, **nombre, edad y correo electrónico**.
-    * Botón "**editar**" que muestra un **formulario modal**.
-    * El formulario permite seleccionar una imagen desde la **galería** y editar nombre, edad, y correo (campos pre-llenados).
-    * Botón "**guardar**" que hace *dismiss*, notifica a la vista anterior de los cambios mediante un **delegado**, y actualiza los datos.
+### 6. **Mapas**
+- 🎯 **Estado:** ⏳ Pendiente
+- 📋 **Descripción:** Explora ubicaciones en MapKit
+- 🔧 **Estado Actual:** Placeholder (apunta a UIViewController genérico)
+- 📝 **Por Implementar:**
+  - Módulo VIPER completo
+  - Integración con MapKit
+  - Geolocalización
+  - Anotaciones personalizadas
 
-### Feature 2: UIComponents
+### 7. **WebView**
+- 🎯 **Estado:** ⏳ Pendiente
+- 📋 **Descripción:** Carga páginas web
+- 🔧 **Estado Actual:** Placeholder (apunta a UIViewController genérico)
+- 📝 **Por Implementar:**
+  - Módulo VIPER completo
+  - WKWebView implementation
+  - Controles de navegación web
+  - Manejo de errores de carga
 
-* Crear un **view controller** que lista los siguientes componentes dentro de un **UIScrollView**:
-    1.  **Label**.
-    2.  **TextView:** No editable. Debe incluir un **attributed text** con al menos dos propiedades y un **hipervínculo** "Click aquí" que abra la página inicial de Google en el navegador.
-    3.  **TextField**.
-    4.  **Button:** Al hacer *tap*, muestra una **alerta nativa** con el texto ingresado en el *textfield*.
-    5.  **Switch:** Modifica si el *TextField* anterior puede ser **editado o no**.
-    6.  **Segmented Control** ("Nombre" y "Edad"): Valor por defecto "Nombre". Al cambiar la opción, el *TextField* borra el texto y cambia el tipo de teclado (alfanumérico para "Nombre", numérico para "Edad").
-    7.  **ImageView** con una imagen por default.
+## 📊 Progreso General
+- **Completado:** 4/7 módulos (57% → 71%)
+- **Pendiente:** 3/7 módulos (43% → 29%)
+- **En Desarrollo:** Networking (próximo)
 
-### Feature 3: Album
+## 🎨 Características de UI
+- **Diseño:** Cards con sombras (UI programática)
+- **Iconos:** SF Symbols
+- **Navegación:** UINavigationController programático
+- **Colores:** Sistema iOS (Dynamic Colors)
+- **AutoLayout:** NSLayoutConstraint programático
 
-* La mitad superior de la vista contendrá un **image view**.
-* La mitad inferior contendrá un **collection view** con **scroll horizontal**.
-* Mostrar un máximo de **8 imágenes** en el *collection view*.
-* Al seleccionar una imagen, se debe mostrar en grande en el *image view* superior.
+## 🔄 Flujo de Desarrollo Git Flow
+- **`main`**: Rama de producción
+- **`develop`**: Rama de integración
+- **`feature/persistence`**: ✅ COMPLETADA - Lista para merge
+- **Próxima**: `feature/networking` - Próxima rama a crear
+- **Completadas**: `feature/UIComponents`, `feature/album`, `feature/1-main-view`, `feature/persistence`
 
-### Feature 4: Persistence (KeyChain y UserDefaults)
+## 🚀 Próximos Pasos
+1. ✅ **COMPLETADO:** Módulo **Persistence** con VIPER y UI programática
+2. 🎯 **SIGUIENTE:** Implementar módulo **Networking** con VIPER
+3. Agregar módulo **Mapas** con MapKit 
+4. Desarrollar módulo **WebView** con WKWebView
+5. Hacer merge a develop siguiendo Git Flow
 
-* **KeyChain:** Formulario para almacenar y leer **usuario** y **contraseña** en el **key chain**.
-    * El *textfield* de contraseña debe tener **texto seguro** habilitado y un botón para **mostrar y ocultar** la contraseña.
-    * Botón "**leer**": Busca y pinta los valores guardados. Si no los encuentra, muestra una alerta.
-    * Botón "**guardar**": Almacena los textos en el *key chain*.
-* **User Defaults:** Tres **switch** cuyo valor debe **recordarse** cada que se cierra y se vuelve a abrir la app.
+## 📱 Instalación
+1. Abrir `TestApp4.xcodeproj`
+2. Ejecutar en simulador o dispositivo iOS
+3. Explorar las funcionalidades desde la pantalla principal
 
-### Feature 5: Networking (Lottie y API)
+## 🔧 Requisitos
+- iOS 13.0+
+- Xcode 12.0+
+- Swift 5.0+
 
-* **Dependencia:** Agregar el *framework* **Lottie** (recomendado Swift Package Manager).
-* **Animación de Carga:** Crear una clase/función para **bloquear la vista** de cualquier `UIViewController` y mostrar la animación de Lottie mientras se ejecutan tareas en segundo plano (ej: llamada a API).
-* **Lógica de la Vista:** Controller con una **tabla**.
-    * Al entrar, la tabla estará vacía, se mostrará la animación de Lottie y se realizará una llamada a una **API pública gratuita** (ej: `https://pokeapi.co/`).
-    * Al concluir la llamada, se quitará la animación y se mostrarán los datos recibidos en la tabla.
-    * Crear una clase para peticiones HTTP y modelos para mapear los JSON a objetos.
-    * La tabla debe poder **borrar celdas** mediante un *swipe action*.
-    * **Confirmación:** La eliminación de la celda se confirmará con un **`UIAlertController`** con estilo **`.actionSheet`**.
-
-### Feature 6: MapKit
-
-* Vista con un **mapa**, dos **textfields** (para latitud y longitud) y un **botón** ("mostrar").
-* Al presionar el botón:
-    * **Validar** que los campos tengan texto válido y notificar el error si no lo tienen.
-    * Si es válido, poner un **pin** en el mapa y hacer **zoom** a la zona.
-
-### Feature 7: Web View
-
-* Implementar una vista que cargue una página de internet mediante un **web view**.
-
----
-
-## Features Opcionales (Prioridad Baja)
-
-Considera implementar las siguientes *features* para aumentar la calidad del proyecto:
-
-* Implementar **Localized Strings** (español como lenguaje predefinido).
-* Implementar **sonidos** (ej: un sonido de *click* al seleccionar *features*).
-* Agregar la dependencia **IQKeyboard** para que los *textfields* no se tapen al mostrar el teclado.
-* Implementar autenticación **Touch ID o Face ID** para realizar cambios en perfil y leer contraseña del Key Chain.
-* Agregar una **fuente custom**.
-* Integrar alguna dependencia de **Firebase** como Remote Config.
+## 🎉 Últimas Actualizaciones
+- **Octubre 10, 2025:** ✅ Módulo Persistence completado al 100%
+  - VIPER architecture implementada
+  - UI completamente programática
+  - Keychain y UserDefaults funcionales
+  - Todos los errores resueltos
+  - Testing exitoso
