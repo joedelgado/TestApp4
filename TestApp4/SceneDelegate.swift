@@ -11,22 +11,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        // Create programmatic UI instead of using storyboard
+        // Crear UI programática en lugar de usar storyboard
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
         window = UIWindow(windowScene: windowScene)
-        // Crear los dos tabs
-        let mainVC = MainViewController()
-        mainVC.tabBarItem = UITabBarItem(title: "Features", image: UIImage(systemName: "list.bullet"), tag: 0)
-        let profileVC = ProfileViewController()
-        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 1)
-        // Embeder en navigation controllers
-        let mainNav = UINavigationController(rootViewController: mainVC)
-        let profileNav = UINavigationController(rootViewController: profileVC)
-        // Crear el tab bar controller
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [mainNav, profileNav]
-        window?.rootViewController = tabBarController
+        
+        // Create MainViewController programmatically
+        // Crear MainViewController programáticamente
+        let mainViewController = MainViewController()
+        let navigationController = UINavigationController(rootViewController: mainViewController)
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

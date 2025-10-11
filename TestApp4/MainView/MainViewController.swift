@@ -2,6 +2,7 @@
 // Main tab for features list
 import UIKit
 
+// MARK: - Feature Model
 class Feature {
     let title: String
     let description: String
@@ -15,6 +16,7 @@ class Feature {
     }
 }
 
+// MARK: - Feature Cell
 class FeatureCell: UITableViewCell {
     static let identifier = "FeatureCell"
     let cardView = UIView()
@@ -71,12 +73,13 @@ class FeatureCell: UITableViewCell {
     }
 }
 
+// MARK: - Main View Controller
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let tableView = UITableView(frame: .zero, style: .plain)
     let features: [Feature] = [
         Feature(title: "UI Components", description: "Explora los componentes de UIKit", icon: "rectangle.stack", destination: UIComponentsViewController.self),
         Feature(title: "Album", description: "Visualiza y selecciona imágenes", icon: "photo.on.rectangle", destination: AlbumMainViewController.self),
-        Feature(title: "Persistencia", description: "Guarda datos en Keychain y UserDefaults", icon: "lock.shield", destination: UIViewController.self),
+        Feature(title: "Persistencia", description: "Guarda datos en Keychain y UserDefaults", icon: "lock.shield", destination: PersistenceViewController.self),
         Feature(title: "Networking", description: "Consume APIs y muestra animaciones", icon: "network", destination: UIViewController.self),
         Feature(title: "Mapas", description: "Explora ubicaciones en MapKit", icon: "map", destination: UIViewController.self),
         Feature(title: "WebView", description: "Carga páginas web", icon: "safari", destination: UIViewController.self)
@@ -114,10 +117,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // Handle special cases with VIPER modules / Manejar casos especiales con módulos VIPER
         if feature.destination == AlbumMainViewController.self {
-            // Use Album Router to create module / Usar Router de Album para crear módulo
             viewController = AlbumRouter.createAlbumModule()
+        } else if feature.destination == PersistenceViewController.self {
+            // Create PersistenceViewController with programmatic UI
+            // Crear PersistenceViewController con UI programática
+            viewController = PersistenceViewController()
         } else {
-            // Default instantiation / Instanciación por defecto
             viewController = feature.destination.init()
         }
         
