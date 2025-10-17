@@ -98,6 +98,10 @@ Aplicación tutorial de UIKit que implementa diferentes funcionalidades utilizan
   - Integración con MapKit
   - Geolocalización
   - Anotaciones personalizadas
+  - Para este feature, debes crear una vista que tendrá un mapa, dos textfields y un botón, el
+    usuario debe poder ingresar la latitud y longitud en estos textfields, al presionar el botón
+    mostrar se tiene que validar que los campos tengan texto válido, en caso de no serlo notificar
+    el error y en caso de serlo poner un pin en el mapa y hacer zoom a la zona.
 
 ### 7. **WebView**
 - 🎯 **Estado:** ⏳ Pendiente
