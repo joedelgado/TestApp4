@@ -80,7 +80,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         Feature(title: "UI Components", description: "Explora los componentes de UIKit", icon: "rectangle.stack", destination: UIComponentsViewController.self),
         Feature(title: "Album", description: "Visualiza y selecciona imágenes", icon: "photo.on.rectangle", destination: AlbumMainViewController.self),
         Feature(title: "Persistencia", description: "Guarda datos en Keychain y UserDefaults", icon: "lock.shield", destination: PersistenceViewController.self),
-        Feature(title: "Networking", description: "Consume APIs y muestra animaciones", icon: "network", destination: UIViewController.self),
+        Feature(title: "Networking", description: "Consume APIs y muestra animaciones", icon: "network", destination: NetworkingViewController.self),
         Feature(title: "Mapas", description: "Explora ubicaciones en MapKit", icon: "map", destination: UIViewController.self),
         Feature(title: "WebView", description: "Carga páginas web", icon: "safari", destination: UIViewController.self)
     ]
@@ -122,6 +122,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             // Create PersistenceViewController with programmatic UI
             // Crear PersistenceViewController con UI programática
             viewController = PersistenceViewController()
+        } else if feature.destination == NetworkingViewController.self {
+            // Create NetworkingViewController with VIPER architecture
+            // Crear NetworkingViewController con arquitectura VIPER
+            viewController = NetworkingRouter.createModule()
         } else {
             viewController = feature.destination.init()
         }
