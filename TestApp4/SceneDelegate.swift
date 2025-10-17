@@ -12,10 +12,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use Storyboard as specified in README / Usar Storyboard como especifica el README
-        // The Main.storyboard will automatically load with initialViewController
-        // El Main.storyboard se cargará automáticamente con el initialViewController
-        guard let _ = (scene as? UIWindowScene) else { return }
+        // Create programmatic UI instead of using storyboard
+        // Crear UI programática en lugar de usar storyboard
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        window = UIWindow(windowScene: windowScene)
+        
+        // Create MainViewController programmatically
+        // Crear MainViewController programáticamente
+        let mainViewController = MainViewController()
+        let navigationController = UINavigationController(rootViewController: mainViewController)
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
