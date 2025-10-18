@@ -1,0 +1,6 @@
+  develop
+  feature/album
+  feature/mapas
+  feature/networking
+  feature/persistence
+* main
