@@ -81,8 +81,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         Feature(title: "Album", description: "Visualiza y selecciona imágenes", icon: "photo.on.rectangle", destination: AlbumMainViewController.self),
         Feature(title: "Persistencia", description: "Guarda datos en Keychain y UserDefaults", icon: "lock.shield", destination: PersistenceViewController.self),
         Feature(title: "Networking", description: "Consume APIs y muestra animaciones", icon: "network", destination: NetworkingViewController.self),
-        Feature(title: "Mapas", description: "Explora ubicaciones en MapKit", icon: "map", destination: UIViewController.self),
-        Feature(title: "WebView", description: "Carga páginas web", icon: "safari", destination: UIViewController.self)
+        Feature(title: "Mapas", description: "Explora ubicaciones en MapKit", icon: "map", destination: MapasViewController.self),
+        Feature(title: "WebView", description: "Navega páginas web con WKWebView", icon: "safari", destination: WebViewViewController.self)
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,6 +126,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             // Create NetworkingViewController with VIPER architecture
             // Crear NetworkingViewController con arquitectura VIPER
             viewController = NetworkingRouter.createModule()
+        } else if feature.destination == MapasViewController.self {
+            // Create MapasViewController with VIPER architecture
+            // Crear MapasViewController con arquitectura VIPER
+            viewController = MapasRouter.createMapasModule()
+        } else if feature.destination == WebViewViewController.self {
+            // Create WebViewViewController with VIPER architecture
+            // Crear WebViewViewController con arquitectura VIPER
+            viewController = WebViewRouter.createWebViewModule()
         } else {
             viewController = feature.destination.init()
         }
