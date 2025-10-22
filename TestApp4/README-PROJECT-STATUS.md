@@ -191,3 +191,44 @@ TestApp4/WebView/
 1. **Fusión a main** - Completar fusión de develop a main
 2. **Tag y versión** - Crear tag y aumentar versión en proyecto
 3. **Publicación** - Subir a App Store Connect
+
+---
+
+## 🔧 Limpieza de caché de Xcode (script incluido)
+
+Se añadió un script para facilitar la limpieza de la caché y archivos de configuración de Xcode que pueden causar errores en el proyecto (por ejemplo, problemas al leer plists desde caches corruptos).
+
+Ruta del script:
+
+```
+scripts/clean_xcode_cache.sh
+```
+
+Cómo usarlo:
+
+- Probar en modo "dry run" (no borra nada, solo muestra lo que eliminaría):
+
+```bash
+bash scripts/clean_xcode_cache.sh --project TestApp4 --dry-run
+```
+
+- Ejecutar y confirmar interactivamente:
+
+```bash
+bash scripts/clean_xcode_cache.sh --project TestApp4
+```
+
+- Ejecutar sin confirmación (forzar borrado):
+
+```bash
+bash scripts/clean_xcode_cache.sh --project TestApp4 --yes
+```
+
+Nota: si prefieres, puedes dar permiso de ejecución al script y llamarlo directamente:
+
+```bash
+chmod +x scripts/clean_xcode_cache.sh
+./scripts/clean_xcode_cache.sh --project TestApp4 --dry-run
+```
+
+Recomendación: ejecutar este script cuando aparezcan errores extraños relacionados con plists o cuando Xcode muestre comportamiento inconsistente tras cambios estructurales en el proyecto.
