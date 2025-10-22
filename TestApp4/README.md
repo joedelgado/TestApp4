@@ -87,35 +87,46 @@ Aplicación tutorial de UIKit que implementa diferentes funcionalidades utilizan
   - `EditProfileViewController.swift`
   - Módulos VIPER auxiliares
 
-## ⏳ Funcionalidades Pendientes
+### 6. **Mapas** ✅ COMPLETADO
+- 🎯 **Estado:** ✅ Completado al 100%
+- 📁 **Módulo:** `Mapas/`
+- 📋 **Descripción:** Explora ubicaciones en MapKit con validación de coordenadas
+- 🔧 **Arquitectura:** VIPER completa con UI programática
+- ⚡ **Funcionalidades:**
+  - 🗺️ Integración completa con MapKit
+  - 📍 Geolocalización y anotaciones personalizadas
+  - 📝 Validación de latitud y longitud en TextFields
+  - 🔍 Zoom automático a la zona seleccionada
+  - ⚠️ Manejo de errores para entradas inválidas
+  - 🎯 Interface completamente programática
+- 📄 **Archivos:**
+  - `MapasViewController.swift` (UI programática completa)
+  - `MapasPresenter.swift`
+  - `MapasInteractor.swift`
+  - `MapasEntity.swift`
+  - `MapasRouter.swift`
 
-### 6. **Mapas**
-- 🎯 **Estado:** ⏳ Pendiente
-- 📋 **Descripción:** Explora ubicaciones en MapKit
-- 🔧 **Estado Actual:** Placeholder (apunta a UIViewController genérico)
-- 📝 **Por Implementar:**
-  - Módulo VIPER completo
-  - Integración con MapKit
-  - Geolocalización
-  - Anotaciones personalizadas
-  - Para este feature, debes crear una vista que tendrá un mapa, dos textfields y un botón, el
-    usuario debe poder ingresar la latitud y longitud en estos textfields, al presionar el botón
-    mostrar se tiene que validar que los campos tengan texto válido, en caso de no serlo notificar
-    el error y en caso de serlo poner un pin en el mapa y hacer zoom a la zona.
-
-### 7. **WebView**
-- 🎯 **Estado:** ⏳ Pendiente
-- 📋 **Descripción:** Carga páginas web
-- 🔧 **Estado Actual:** Placeholder (apunta a UIViewController genérico)
-- 📝 **Por Implementar:**
-  - Módulo VIPER completo
-  - WKWebView implementation
-  - Controles de navegación web
-  - Manejo de errores de carga
+### 7. **WebView** ✅ COMPLETADO
+- 🎯 **Estado:** ✅ Completado al 100%
+- 📁 **Módulo:** `WebView/`
+- 📋 **Descripción:** Carga y navega páginas web con WKWebView
+- 🔧 **Arquitectura:** VIPER completa con UI programática
+- ⚡ **Funcionalidades:**
+  - 🌐 WKWebView para carga de páginas web
+  - 🧭 Controles de navegación (atrás, adelante, recargar)
+  - ❌ Manejo de errores de carga
+  - 📊 Indicadores de progreso
+  - 🎯 Interface completamente programática
+- 📄 **Archivos:**
+  - `WebViewViewController.swift` (UI programática completa)
+  - `WebViewPresenter.swift`
+  - `WebViewInteractor.swift`
+  - `WebViewEntity.swift`
+  - `WebViewRouter.swift`
 
 ## 📊 Progreso General
-- **Completado:** 5/7 módulos (71%)
-- **Pendiente:** 2/7 módulos (29%)
+- **Completado:** 7/7 módulos (100%)
+- **Pendiente:** 0/7 módulos (0%)
 - **En Desarrollo:** Ninguno
 
 ## 🎨 Características de UI
@@ -130,25 +141,57 @@ Aplicación tutorial de UIKit que implementa diferentes funcionalidades utilizan
 - **`develop`**: Rama de integración
 - **`feature/persistence`**: ✅ COMPLETADA - Lista para merge
 - **`feature/networking`**: ✅ COMPLETADA - Lista para merge
-- **Próxima**: `feature/mapas` - Próxima rama a crear
-- **Completadas**: `feature/UIComponents`, `feature/album`, `feature/1-main-view`, `feature/persistence`, `feature/networking`
+- **`feature/mapas`**: ✅ COMPLETADA - Lista para merge
+- **`feature/webview`**: ✅ COMPLETADA - Lista para merge
+- **Completadas**: `feature/UIComponents`, `feature/album`, `feature/1-main-view`, `feature/persistence`, `feature/networking`, `feature/mapas`, `feature/webview`
 
 ## 🚀 Próximos Pasos
 1. ✅ **COMPLETADO:** Módulo **Persistence** con VIPER y UI programática
 2. ✅ **COMPLETADO:** Módulo **Networking** con VIPER y consumo de API REST
-3. Agregar módulo **Mapas** con MapKit 
-4. Desarrollar módulo **WebView** con WKWebView
-5. Hacer merge a develop siguiendo Git Flow
+3. ✅ **COMPLETADO:** Módulo **Mapas** con MapKit y validación de coordenadas
+4. ✅ **COMPLETADO:** Módulo **WebView** con WKWebView y controles de navegación
+5. ✅ **Proyecto Completo al 100%** - Listo para presentación y despliegue
 
-## 📱 Instalación
-1. Abrir `TestApp4.xcodeproj`
-2. Ejecutar en simulador o dispositivo iOS
-3. Explorar las funcionalidades desde la pantalla principal
-
-## 🔧 Requisitos
+## 📱 Instalación y Despliegue
+### Requisitos Previos
 - iOS 13.0+
 - Xcode 12.0+
 - Swift 5.0+
+- macOS con Xcode instalado
+
+### Instalación Local
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/TestApp4.git
+   cd TestApp4
+   ```
+2. Abrir el proyecto en Xcode:
+   ```bash
+   open TestApp4.xcodeproj
+   ```
+3. Ejecutar en simulador o dispositivo iOS
+4. Explorar las funcionalidades desde la pantalla principal
+
+### Despliegue en Repositorio Remoto
+1. Crear repositorio en GitHub/GitLab
+2. Agregar remote origin:
+   ```bash
+   git remote add origin https://github.com/tu-usuario/TestApp4.git
+   ```
+3. Push inicial:
+   ```bash
+   git push -u origin main
+   ```
+4. Para desarrollo colaborativo, seguir el flujo Git Flow documentado en `GIT-FLOW-README.md`
+
+## 🔧 Requisitos Técnicos
+- iOS 13.0+
+- Xcode 12.0+
+- Swift 5.0+
+- Arquitectura VIPER
+- UIKit Programático
+- MapKit (para módulo Mapas)
+- WebKit (para módulo WebView)
 
 ## 🎉 Últimas Actualizaciones
 - **Octubre 10, 2025:** ✅ Módulo Persistence completado al 100%
@@ -168,3 +211,8 @@ Aplicación tutorial de UIKit que implementa diferentes funcionalidades utilizan
   - Métodos faltantes agregados al protocolo
   - Compilación y ejecución exitosas
   - README actualizado con funcionalidades completas
+- **Octubre 21, 2025:** ✅ Proyecto TestApp4 completado al 100%
+  - Módulos Mapas y WebView finalizados con VIPER y UI programática
+  - Documentación completa actualizada
+  - Proyecto listo para presentación y despliegue en repositorio remoto
+  - Todos los módulos funcionales y probados
