@@ -216,3 +216,9 @@ Aplicación tutorial de UIKit que implementa diferentes funcionalidades utilizan
   - Documentación completa actualizada
   - Proyecto listo para presentación y despliegue en repositorio remoto
   - Todos los módulos funcionales y probados
+  - ✅ **Mac Catalyst habilitado** - App compatible con macOS para presentaciones
+
+## 🖥️ Compatibilidad con macOS (Mac Catalyst)
+- ✅ **Habilitado:** La aplicación ahora es compatible con macOS
+- ✅ **Ventajas:** Ejecutar la app en Mac para demostraciones sin necesidad de dispositivo iOS
+- ✅ **Configuración:** Sigue los pasos de instalación para Mac Catalyst
